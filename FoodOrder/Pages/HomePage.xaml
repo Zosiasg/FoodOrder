@@ -5,14 +5,15 @@
              xmlns:vm="clr-namespace:FoodOrder.ViewModels"
              xmlns:models="clr-namespace:FoodOrder.Models"
              x:Class="FoodOrder.Pages.HomePage"
-             Title="Dish World"
+             Title="Thai Restaurant"
              Padding="15"
              x:DataType="vm:HomeViewModel">
+             
     <ScrollView>
         <VerticalStackLayout Spacing="10">
             <Border StrokeShape="RoundRectangle 10"
                     StrokeThickness="0"
-                    BackgroundColor="Goldenrod"
+                    BackgroundColor="#b9d8c7"
                     VerticalOptions="Start"
                     Padding="15">
                 <Grid ColumnDefinitions="*, 150"
@@ -30,7 +31,7 @@
                     <Button Grid.Row="1"
                             Grid.Column="0"
                             Text="Get it now"
-                            BackgroundColor="PaleGoldenrod"
+                            BackgroundColor="gold"
                             TextColor="Black"
                             FontAttributes="Bold"
                             CornerRadius="22"
@@ -38,18 +39,18 @@
                             Padding="50, 0"/>
                     <Image Grid.RowSpan="2"
                             Grid.Column="1"
-                           Source="Dish3img"
-                           HeightRequest="150"
-                           WidthRequest="150"/>
+                           Source="main"
+                           HeightRequest="200"
+                           WidthRequest="200"/>
                 </Grid>
 
             </Border>
 
             <Border StrokeShape="RoundRectangle 22"
                     StrokeThickness="2"
-                    Stroke="Goldenrod">
+                    Stroke="#a07cb2">
                 <Label Text="Search here..."
-                       TextColor="Goldenrod"
+                       TextColor="#a07cb2"
                        Padding="10, 14"/>
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToAllDishsPageCommand}"
@@ -88,7 +89,7 @@
                         <Border FlexLayout.Basis="50%"
                                 StrokeShape="RoundRectangle 10"
                                 StrokeThickness="0"
-                                BackgroundColor="PaleGoldenrod"
+                                BackgroundColor="#e7daeb"
                                 Padding="10"
                                 Margin="2">
                             <Grid RowDefinitions="150, Auto, auto, Auto"
@@ -108,27 +109,20 @@
                                 <Grid Grid.Row="2"
                                       ColumnDefinitions="*, *">
                                     <Label Grid.Column="0"
-                                           Text="{Binding Price, StringFormat='${0:N2}'}"
+                                           Text="{Binding Price, StringFormat='{0:N2} zł'}"
                                            VerticalOptions="Center"
                                            FontAttributes="Bold"/>
                                     <HorizontalStackLayout Grid.Column="1"
                                                            HorizontalOptions="End"
                                                            Spacing="2"
                                                            VerticalOptions="Center">
-                                        <Label Text="4"/>
-                                        <Image Source="star"
-                                               HeightRequest="15"
-                                               WidthRequest="15">
-                                            <Image.Behaviors>
-                                                <toolkit:IconTintColorBehavior TintColor="DarkGoldenrod"/>
-                                            </Image.Behaviors>
-                                        </Image>
+                                      
 
                                     </HorizontalStackLayout>
                                 </Grid>
                                 <Button Grid.Row="3"
                                         Text="View more"
-                                        BackgroundColor="Gold"
+                                        BackgroundColor="gold"
                                         TextColor="Black"
                                         CornerRadius="22"
                                         FontAttributes="Bold"

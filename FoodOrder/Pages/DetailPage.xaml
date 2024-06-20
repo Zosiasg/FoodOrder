@@ -38,21 +38,14 @@
                        HorizontalOptions="Center"/>
                 <Grid ColumnDefinitions="*, *">
                     <Label Grid.Column="0"
-                            Text="{Binding Dish.Price, StringFormat='${0:N2}'}"
+                            Text="{Binding Dish.Price, StringFormat='{0:N2} zł'}"
                             FontAttributes="Bold"
                             FontSize="18"/>
                     <HorizontalStackLayout Grid.Column="1"
                                     HorizontalOptions="End"
                                     Spacing="2"
                                     VerticalOptions="Center">
-                        <Label Text="4"/>
-                        <Image Source="star"
-                                HeightRequest="15"
-                                WidthRequest="15">
-                            <Image.Behaviors>
-                                <toolkit:IconTintColorBehavior TintColor="DarkGoldenrod"/>
-                            </Image.Behaviors>
-                        </Image>
+                        
                     </HorizontalStackLayout>
                 </Grid>
 
@@ -63,27 +56,27 @@
 
                 <Label FontSize="14"
                        LineHeight="1.5"
-                       Text="This is some random description o=for this Dish, so that we can deisplay this ion the Dish details page, to checdesign the ui This is some random description o=for this Dish, so that we can deisplay this ion the Dish details page, to checdesign the uiThis is some random description o=for this Dish, so that we can deisplay this ion the Dish details page, to checdesign the uiThis is some random description o=for this Dish, so that we can deisplay this ion the Dish details page, to checdesign the ui"/>
+                       Text="{Binding Dish.Description}"/>
             </VerticalStackLayout>
 
         </ScrollView>
         <Border StrokeThickness="0"
                 x:Name="bottomBox"
-                BackgroundColor="DarkGoldenrod"
+                BackgroundColor="#a07cb2"
                 Margin="-1"
                 VerticalOptions="End"
                 HeightRequest="150"
                 Padding="15"
                 StrokeShape="{OnPlatform Android='RoundRectangle 30, 30, 0, 0', Default='RoundRectangle 0'}">
             <Border.Shadow>
-                <Shadow Brush="Gold"
+                <Shadow Brush="Purple"
                         Radius="100"/>
             </Border.Shadow>
             <Grid RowDefinitions="Auto, Auto"
                   ColumnDefinitions="*, *">
                 <Label Grid.Row="0"
                        Grid.Column="0"
-                       Text="{Binding Dish.Amount, StringFormat='${0:N2}'}"
+                       Text="{Binding Dish.Amount, StringFormat='{0:N2} zł'}"
                        FontSize="20"
                        TextColor="White"
                        FontAttributes="Bold"
@@ -98,7 +91,7 @@
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding RemoveFromCartCommand}">
                         <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="Gold"/>
+                            <toolkit:IconTintColorBehavior TintColor="#e7daeb"/>
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label Grid.Column="1"
@@ -112,7 +105,7 @@
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding AddToCartCommand}">
                         <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="Gold"/>
+                            <toolkit:IconTintColorBehavior TintColor="#e7daeb"/>
                         </ImageButton.Behaviors>
                     </ImageButton>
 
@@ -121,7 +114,8 @@
                 <Button Grid.Row="1"
                         Grid.ColumnSpan="2"
                         Text="View Cart"
-                        BackgroundColor="Goldenrod"
+                        BackgroundColor="gold"
+                        TextColor="Black"
                         HorizontalOptions="Center"
                         CornerRadius="22"
                         Padding="80, 10"
@@ -137,7 +131,7 @@
                      RotationY="{OnPlatform Android=180, Default=0}"
                      Clicked="ImageButton_Clicked">
             <ImageButton.Behaviors>
-                <toolkit:IconTintColorBehavior TintColor="DarkGoldenrod"/>
+                <toolkit:IconTintColorBehavior TintColor="#4e355a"/>
             </ImageButton.Behaviors>
 
         </ImageButton>

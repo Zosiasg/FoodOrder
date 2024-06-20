@@ -3,34 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodOrder.Pages.MainPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="DarkGoldenrod">
+             BackgroundColor="#a07cb2">
 
     <Grid RowDefinitions="Auto, *, Auto"
           Padding="15, 25">
         <Label Grid.Row="0"
-               Text="Restaurant Nepoli"
-               FontSize="50"
+               Text="To thai"
+               FontSize="60"
                HorizontalOptions="Center"
                FontAttributes="Bold"/>
 
         <Image Grid.Row="1"
-               Source="Dish1img.png"
-               HeightRequest="250"
-               WidthRequest="250"
+               Source="main2.png"
+               HeightRequest="350"
+               WidthRequest="300"
                VerticalOptions="Center"
                HorizontalOptions="Center"/>
 
         <VerticalStackLayout Grid.Row="2"
                              Spacing="15">
-            <Label Text="The Taste of Italian Dish"
+            <Label Text="The best Thai food"
                    FontSize="40"
                    FontAttributes="Bold"/>
-            <Label Text="Feel the taste of mouth watering Dish from its orifgin country"
+            <Label Text="Enjoy Thai dishes from our menu"
                    FontSize="18"
-                   LineHeight="1.2"/>
+                   LineHeight="1.2"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
             <Border StrokeShape="RoundRectangle 25"
                     StrokeThickness="0"
-                    BackgroundColor="Goldenrod"
+                    BackgroundColor="gold"
                     HeightRequest="50">
 
                 <Border.GestureRecognizers>

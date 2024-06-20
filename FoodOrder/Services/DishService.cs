@@ -8,63 +8,73 @@ namespace FoodOrder.Services
         {
             new Dish
             {
-                Name = "Dish 1",
-                Image = "Dish1img",
-                Price = 5.1
+                Name = " Chrupiące Krewetki",
+                Image = "krewetki2.png",
+                Price = 31.90,
+                Description = "Krewetki panierowane w panierce panko, podawane z sosem sweet chilli"
             },
             new Dish
             {
-                Name = "Dish 2",
-                Image = "Dish2img",
-                Price = 2.5
+                Name = "Won Ton",
+                Image = "soup.png",
+                Price = 19.90,
+                Description = "Bulion z kilku rodzajów mięs, podawany z pierożkami z aksamitnego ciasta wonton, nadzianego farszem wieprzowym. Podawany z olejem czosnkowym i szczypiorkiem oraz makaronem sojowym"
             },
             new Dish
             {
-                Name = "Dish 3",
-                Image = "Dish3img",
-                Price = 1.45
+                Name = "Bulion z Kaczki",
+                Image = "bulionzkaczki.png",
+                Price = 24.90,
+                Description = "Aromatyczny bulion z kaczki, gotowany z przyprawami korzennymi. Podawany z makaronem ryżowym, plastrami kaczej piersi i prażonym czosnkiem\n"
             },
             new Dish
             {
-                Name = "Dish 4",
-                Image = "Dish4img",
-                Price = 3.5
+                Name = "Tom Yum Noodles",
+                Image = "noodles.png",
+                Price = 31.90,
+                Description = "Nasza bestsellerowa zupa Tom Yum z aromatyczną trawą cytrynową w wersji z makaronem ryżowym i orzeszkami ziemnymi"
             },
             new Dish
             {
-                Name = "Dish 5",
-                Image = "Dish5img",
-                Price = 2.99
+                Name = "Tom Kha 🌶️",
+                Image = "zupazkrewetkami.png",
+                Price = 19.90,
+                Description = "Kremowa i aksamitna zupa na bazie mleczka kokosowego z dodatkiem galangalu, trawy cytrynowej i kolendry"
             },
             new Dish
             {
-                Name = "Dish 6",
-                Image = "Dish6img",
-                Price = 5.1
+                Name = "Pad thai",
+                Image = "padthai.png",
+                Price = 34.90,
+                Description = "Tajski klasyk, nasz BESTSELLER. Makaron ryżowy z tofu, jajkiem w sosie z tamaryndowca, cukru, sosu rybnego. Podawany z limonką, orzechami arachidowymi i płatkami chilli"
             },
             new Dish
             {
-                Name = "Dish 7",
-                Image = "Dish7img",
-                Price = 4.0
+                Name = "Chilli & Basil 🌶️🌶️",
+                Image = "noodles.png",
+                Price = 34.90,
+                Description = "Makaron jajeczny smażony na woku w sosie ostrygowo-sojowym, z jajkiem, warzywami i świeżym chilli"
             },
             new Dish
             {
-                Name = "Dish 8",
-                Image = "Dish8img",
-                Price = 9.25
+                Name = "Thai Style Noodles",
+                Image = "makaron.png",
+                Price = 34.90,
+                Description = "\n34,90 zł\nŁagodniejszy brat Chili & Basil, makaron jajeczny w sosie ostrygowo-sojowym, smażony na woku z jajkiem, brokułem i innymi warzywami."
             },
             new Dish
             {
-                Name = "Dish 9",
-                Image = "Dish9img",
-                Price = 3.24
+                Name = "Green Curry🌶️🌶️",
+                Image = "curry.png",
+                Price = 32.90,
+                Description = "Aromatyczne i pikantne połączenie 100% mleczka kokosowego z green curry, podawane z bakłażanem, bazylią i innymi warzywami"
             },
             new Dish
             {
-                Name = "Dish 10",
-                Image = "Dish10img",
-                Price = 2.9
+                Name = "Sweet & Sour Chicken",
+                Image = "kurczak.png",
+                Price = 36.90,
+                Description = "Najbardziej znane dani kuchni azjatyckiej. Kurczak w sosie słodko-kwaśnym smażony na woku z warzywami. Podawane z aromatycznym ryżem jaśminowym"
             }
         };
 

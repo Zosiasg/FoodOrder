@@ -22,9 +22,9 @@
         <SearchBar Grid.Row="0"
                    x:Name="searchBar"
                    Placeholder="Search for Dish..."
-                   PlaceholderColor="Goldenrod"
+                   PlaceholderColor="#4e355a"
                    CancelButtonColor="Red"
-                   TextColor="DarkGoldenrod"
+                   TextColor="purple"
                    ios:SearchBar.SearchBarStyle="Minimal"
                    SearchCommand="{Binding SearchDishsCommand}"
                    SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
@@ -42,7 +42,7 @@
                         <DataTemplate x:DataType="models:Dish">
                             <Border StrokeShape="RoundRectangle 10"
                                     StrokeThickness="0"
-                                    BackgroundColor="PaleGoldenrod"
+                                    BackgroundColor="#e7daeb"
                                     Padding="10"
                                     Margin="5">
                                 <Grid ColumnDefinitions="130, *"
@@ -58,21 +58,13 @@
                                                FontSize="20"/>
                                         <Grid ColumnDefinitions="*, *">
                                             <Label Grid.Column="0"
-                                                   Text="{Binding Price, StringFormat='${0:N2}'}"
+                                                   Text="{Binding Price, StringFormat='{0:N2} zł'}"
                                                    FontAttributes="Bold"/>
                                             <HorizontalStackLayout Grid.Column="1"
                                                            HorizontalOptions="End"
                                                            Spacing="2"
                                                            VerticalOptions="Center">
-                                        <Label Text="4"/>
-                                        <Image Source="star"
-                                               HeightRequest="15"
-                                               WidthRequest="15">
-                                            <Image.Behaviors>
-                                                <toolkit:IconTintColorBehavior TintColor="DarkGoldenrod"/>
-                                            </Image.Behaviors>
-                                        </Image>
-
+                                        
                                     </HorizontalStackLayout>
 
                                         </Grid>

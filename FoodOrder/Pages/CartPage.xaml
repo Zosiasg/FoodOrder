@@ -7,7 +7,7 @@
              xmlns:models="clr-namespace:FoodOrder.Models"
              Title="Cart"
              x:DataType="vm:CartViewModel"
-             BackgroundColor="PaleGoldenrod">
+             BackgroundColor="#e7daeb">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Clear Cart"
                      Command="{Binding ClearCartCommand}"/>
@@ -71,13 +71,13 @@
                                                  VerticalOptions="Center"
                                                  Spacing="2">
                                 <Label Text="{Binding Name}"/>
-                                <Label Text="{Binding Price, StringFormat='${0:N2}'}"
+                                <Label Text="{Binding Price, StringFormat='{0:N2} zł'}"
                                        FontSize="12"/>
 
                             </VerticalStackLayout>
 
                             <Label Grid.Column="4"
-                                   Text="{Binding Amount, StringFormat='${0:N2}'}"
+                                   Text="{Binding Amount, StringFormat='{0:N2} zł'}"
                                    VerticalOptions="Center"
                                    HorizontalOptions="Center"
                                    FontSize="15"
@@ -109,7 +109,7 @@
 
         </ScrollView>
         <Border StrokeShape="RoundRectangle 40"
-                BackgroundColor="DarkGoldenrod"
+                BackgroundColor="#4e355a"
                 StrokeThickness="0"
                 VerticalOptions="End"
                 Margin="5"
@@ -124,7 +124,7 @@
                         <FormattedString>
                             <Span Text="Total: &#10;"
                                   FontSize="18"/>
-                            <Span Text="{Binding TotalAmount, StringFormat='${0:N2}'}"
+                            <Span Text="{Binding TotalAmount, StringFormat='{0:N2} zł'}"
                                   FontSize="20"
                                   FontAttributes="Bold"
 />
@@ -136,7 +136,8 @@
 
                 <Button Grid.Column="1"
                         Text="Place Order"
-                        BackgroundColor="Goldenrod"
+                        BackgroundColor="gold"
+                        TextColor="Black"
                         CornerRadius="22"
                         VerticalOptions="Center"
                         HorizontalOptions="End"

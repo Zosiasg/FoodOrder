@@ -23,7 +23,7 @@
                Scale="0"/>
         <Button x:Name="homeBtn"
                 Text="Go to home screen"
-                BackgroundColor="DarkGoldenrod"
+                BackgroundColor="#4e355a"
                 CornerRadius="22"
                 HorizontalOptions="Center"
                 Padding="50, 10"
