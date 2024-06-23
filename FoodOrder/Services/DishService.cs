@@ -15,7 +15,7 @@ namespace FoodOrder.Services
             },
             new Dish
             {
-                Name = "Won Ton",
+                Name = "Won Ton 🌶️",
                 Image = "soup.png",
                 Price = 19.90,
                 Description = "Bulion z kilku rodzajów mięs, podawany z pierożkami z aksamitnego ciasta wonton, nadzianego farszem wieprzowym. Podawany z olejem czosnkowym i szczypiorkiem oraz makaronem sojowym"
