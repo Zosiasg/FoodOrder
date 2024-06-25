@@ -31,7 +31,7 @@ namespace FoodOrder.ViewModels
         }
 
         [RelayCommand]
-        private async void RemoveCartItem(string name)
+        private async Task RemoveCartItem(string name)
         {
             var item = Items.FirstOrDefault(i => i.Name == name);
             if (item is not null)
@@ -46,13 +46,13 @@ namespace FoodOrder.ViewModels
                     CornerRadius = 10,
                     BackgroundColor = Colors.PaleGoldenrod
                 };
-                var snackbar = Snackbar.Make($"'{item.Name}' removed froom cart",
+                var snackbar = Snackbar.Make($"'{item.Name}' usuń z koszyka",
                     () =>
                     {
                         Items.Add(item);
                         RecalculateTotalAmount();
                         CartItemUpdated?.Invoke(this, item);
-                    }, "Undo", TimeSpan.FromSeconds(5), snackbarOptions);
+                    }, "Cofnij", TimeSpan.FromSeconds(5), snackbarOptions);
 
                 await snackbar.Show();
             }
@@ -61,13 +61,13 @@ namespace FoodOrder.ViewModels
         [RelayCommand]
         private async Task ClearCart()
         {
-            if (await Shell.Current.DisplayAlert("Confirm Clear Cart?", "Do you really want to clear the cart items?", "Yes", "No"))
+            if (await Shell.Current.DisplayAlert("Potwierdz?", "Czy wyczyścić?", "Tak", "Nie"))
             {
                 Items.Clear();
                 RecalculateTotalAmount();
                 CartCleared?.Invoke(this, EventArgs.Empty);
 
-                await Toast.Make("Cart Cleared", ToastDuration.Short).Show();
+                await Toast.Make("Kosz wyczyszczony", ToastDuration.Short).Show();
             }
         }
 

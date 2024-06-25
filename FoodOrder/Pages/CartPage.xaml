@@ -5,11 +5,11 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:vm="clr-namespace:FoodOrder.ViewModels"
              xmlns:models="clr-namespace:FoodOrder.Models"
-             Title="Cart"
+             Title="Koszyk"
              x:DataType="vm:CartViewModel"
              BackgroundColor="#e7daeb">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Clear Cart"
+        <ToolbarItem Text="Wyczyść koszyk"
                      Command="{Binding ClearCartCommand}"/>
 
     </ContentPage.ToolbarItems>
@@ -18,31 +18,11 @@
             <VerticalStackLayout Padding="10">
 
                 <CollectionView ItemsSource="{Binding Items}">
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical"
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
                                    ItemSpacing="10"/>
-            </CollectionView.ItemsLayout>
-            <CollectionView.EmptyView>
-                        
-                        <VerticalStackLayout HorizontalOptions="Center"
-                                             VerticalOptions="Center"
-                                             Spacing="15">
-                            <BoxView HeightRequest="100"
-                                     Color="Transparent"/>
-                            <Label Text="No items in the cart"
-                                   FontSize="25"
-                                   TextColor="Gray"
-                                   HorizontalTextAlignment="Center">
-                            </Label>
-                            <Button Text="Explore all Dishs"
-                                    HorizontalOptions="Center"
-                                    BackgroundColor="Goldenrod"
-                                    Clicked="Button_Clicked"
-                                    />
-
-                        </VerticalStackLayout>
-            </CollectionView.EmptyView>
-            <CollectionView.ItemTemplate>
+                    </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Dish">
                     <Border StrokeShape="RoundRectangle 15"
                             StrokeThickness="0"
@@ -82,15 +62,13 @@
                                    HorizontalOptions="Center"
                                    FontSize="15"
                                    FontAttributes="Bold"/>
-                            <Image Grid.Column="5"
+                             <Image Grid.Column="5"
                                    Source="trash"
                                    HeightRequest="25"
                                    WidthRequest="25"
                                    VerticalOptions="Center"
                                    HorizontalOptions="End">
-                                <Image.Behaviors>
-                                    <toolkit:IconTintColorBehavior TintColor="Red"/>
-                                </Image.Behaviors>
+                                        
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={x:RelativeSource  AncestorType={x:Type vm:CartViewModel}}, Path=RemoveCartItemCommand}"
                                                           CommandParameter="{Binding Name}"/>
@@ -135,7 +113,7 @@
                 </Label>
 
                 <Button Grid.Column="1"
-                        Text="Place Order"
+                        Text="Złóż zamówienie"
                         BackgroundColor="gold"
                         TextColor="Black"
                         CornerRadius="22"

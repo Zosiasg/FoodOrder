@@ -49,7 +49,7 @@
                     </HorizontalStackLayout>
                 </Grid>
 
-                <Label Text="Description"
+                <Label Text="Opis"
                        FontSize="15"
                        FontAttributes="Bold"
                        Margin="0, 10"/>
@@ -67,7 +67,7 @@
                 VerticalOptions="End"
                 HeightRequest="150"
                 Padding="15"
-                StrokeShape="{OnPlatform Android='RoundRectangle 30, 30, 0, 0', Default='RoundRectangle 0'}">
+                StrokeShape="RoundRectangle 0">
             <Border.Shadow>
                 <Shadow Brush="Purple"
                         Radius="100"/>
@@ -90,9 +90,6 @@
                                  Source="decrement"
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding RemoveFromCartCommand}">
-                        <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="#e7daeb"/>
-                        </ImageButton.Behaviors>
                     </ImageButton>
                     <Label Grid.Column="1"
                            Text="{Binding Dish.CartQuantity}"
@@ -104,16 +101,13 @@
                                  Source="increment"
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding AddToCartCommand}">
-                        <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="#e7daeb"/>
-                        </ImageButton.Behaviors>
                     </ImageButton>
 
                 </Grid>
 
                 <Button Grid.Row="1"
                         Grid.ColumnSpan="2"
-                        Text="View Cart"
+                        Text="Pokaż koszyk"
                         BackgroundColor="gold"
                         TextColor="Black"
                         HorizontalOptions="Center"
@@ -124,15 +118,12 @@
                         Command="{Binding ViewCartCommand}"/>
             </Grid>
         </Border>
-        <ImageButton Source="{OnPlatform Android='right_arrow', Default='back'}"
+        <ImageButton Source="right_arrow"
                      VerticalOptions="Start"
                      HorizontalOptions="Start"
                      Margin="15"
-                     RotationY="{OnPlatform Android=180, Default=0}"
+                     RotationY="180"
                      Clicked="ImageButton_Clicked">
-            <ImageButton.Behaviors>
-                <toolkit:IconTintColorBehavior TintColor="#4e355a"/>
-            </ImageButton.Behaviors>
 
         </ImageButton>
     </Grid>

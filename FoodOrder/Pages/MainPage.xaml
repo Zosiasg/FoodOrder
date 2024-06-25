@@ -22,15 +22,7 @@
 
         <VerticalStackLayout Grid.Row="2"
                              Spacing="15">
-            <Label Text="The best Thai food"
-                   FontSize="40"
-                   FontAttributes="Bold"/>
-            <Label Text="Enjoy Thai dishes from our menu"
-                   FontSize="18"
-                   LineHeight="1.2"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-
+            
             <Border StrokeShape="RoundRectangle 25"
                     StrokeThickness="0"
                     BackgroundColor="gold"
@@ -45,7 +37,7 @@
                                        VerticalOptions="Center"
                                        Spacing="10"
                                        Padding="0, 5">
-                    <Label Text="Get Started"
+                    <Label Text="Start"
                            VerticalOptions="Center"
                            FontSize="18"/>
                     <Image Source="right_arrow"

@@ -61,7 +61,7 @@ namespace FoodOrder.ViewModels
             }
             else
             {
-                await Toast.Make("Please select the quantity using the plus (+) button", ToastDuration.Short)
+                await Toast.Make("Musisz dodać coś do koszyka żeby przejść dalej", ToastDuration.Short)
                     .Show();
             }
         }

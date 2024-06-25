@@ -5,77 +5,27 @@
              xmlns:vm="clr-namespace:FoodOrder.ViewModels"
              xmlns:models="clr-namespace:FoodOrder.Models"
              x:Class="FoodOrder.Pages.HomePage"
-             Title="Thai Restaurant"
+             Title="Strona główna"
              Padding="15"
              x:DataType="vm:HomeViewModel">
              
     <ScrollView>
         <VerticalStackLayout Spacing="10">
-            <Border StrokeShape="RoundRectangle 10"
-                    StrokeThickness="0"
-                    BackgroundColor="#b9d8c7"
-                    VerticalOptions="Start"
-                    Padding="15">
-                <Grid ColumnDefinitions="*, 150"
-                      RowDefinitions="*, Auto">
-                    <VerticalStackLayout Grid.Row="0"
-                                         Grid.Column="0"
-                                         Spacing="10">
-                      <Label Text="Best Offer"
-                             FontSize="25"
-                             FontAttributes="Bold"
-                             VerticalOptions="Center"/>
-                        <Label Text="Grab this amazing offer before it expires"/>
-
-                    </VerticalStackLayout>
-                    <Button Grid.Row="1"
-                            Grid.Column="0"
-                            Text="Get it now"
-                            BackgroundColor="gold"
-                            TextColor="Black"
-                            FontAttributes="Bold"
-                            CornerRadius="22"
-                            HorizontalOptions="Center"
-                            Padding="50, 0"/>
-                    <Image Grid.RowSpan="2"
-                            Grid.Column="1"
-                           Source="main"
-                           HeightRequest="200"
-                           WidthRequest="200"/>
-                </Grid>
-
-            </Border>
-
-            <Border StrokeShape="RoundRectangle 22"
-                    StrokeThickness="2"
-                    Stroke="#a07cb2">
-                <Label Text="Search here..."
-                       TextColor="#a07cb2"
-                       Padding="10, 14"/>
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding GoToAllDishsPageCommand}"
-                                          CommandParameter="{x:Boolean true}"/>
-
-                </Border.GestureRecognizers>
-            </Border>
-
-            <BoxView HeightRequest="15"
-                     Color="Transparent"/>
 
             <Grid ColumnDefinitions="*, *">
                 <Label Grid.Column="0"
-                       Text="Popular items"
+                       Text="Popularne"
                        VerticalOptions="End"
                        FontSize="20"
                        FontAttributes="Bold"/>
                 <Label Grid.Column="1"
-                       Text="View all"
+                       Text="Zobacz wszystko"
                        HorizontalOptions="End"
                        VerticalOptions="End"
                        TextDecorations="Underline">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding GoToAllDishsPageCommand}"
-                                              CommandParameter="{x:Boolean false}"/>
+                                              CommandParameter="{x:Boolean}"/>
 
                     </Label.GestureRecognizers>
 
@@ -86,7 +36,7 @@
                         Wrap="Wrap">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate x:DataType="models:Dish">
-                        <Border FlexLayout.Basis="50%"
+                        <Border FlexLayout.Basis="100%"
                                 StrokeShape="RoundRectangle 10"
                                 StrokeThickness="0"
                                 BackgroundColor="#e7daeb"
@@ -116,12 +66,12 @@
                                                            HorizontalOptions="End"
                                                            Spacing="2"
                                                            VerticalOptions="Center">
-                                      
+
 
                                     </HorizontalStackLayout>
                                 </Grid>
                                 <Button Grid.Row="3"
-                                        Text="View more"
+                                        Text="Zobacz więcej"
                                         BackgroundColor="gold"
                                         TextColor="Black"
                                         CornerRadius="22"
@@ -132,11 +82,6 @@
                                         Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:HomeViewModel}}, Path=GoToDetailsPageCommand}"
                                                                       CommandParameter="{Binding .}"/>
                             </Grid>
-                            <Border.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:HomeViewModel}}, Path=GoToDetailsPageCommand}"
-                                                                      CommandParameter="{Binding .}"/>
-
-                                            </Border.GestureRecognizers>
                         </Border>
 
                     </DataTemplate>

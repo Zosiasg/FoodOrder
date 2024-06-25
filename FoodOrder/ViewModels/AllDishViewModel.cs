@@ -23,7 +23,6 @@ namespace FoodOrder.ViewModels
         {
             Dishs.Clear();
             Searching = true;
-            await Task.Delay(1000);
             foreach (var Dish in _DishService.SearchDishs(searchTerm))
             {
                 Dishs.Add(Dish);
