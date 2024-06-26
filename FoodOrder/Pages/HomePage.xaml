@@ -24,8 +24,7 @@
                        VerticalOptions="End"
                        TextDecorations="Underline">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GoToAllDishsPageCommand}"
-                                              CommandParameter="{x:Boolean}"/>
+                        <TapGestureRecognizer Command="{Binding GoToAllDishsPageCommand}"/>
 
                     </Label.GestureRecognizers>
 

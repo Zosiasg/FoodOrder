@@ -13,13 +13,9 @@ namespace FoodOrder.ViewModels
         public ObservableCollection<Dish> Dishs { get; set; }
 
         [RelayCommand]
-        private async Task GoToAllDishsPage(bool fromSearch = false)
+        private async Task GoToAllDishsPage()
         {
-            var parameters = new Dictionary<string, object>
-            {
-                [nameof(AllDishViewModel.FromSearch)] = fromSearch
-            };
-            await Shell.Current.GoToAsync(nameof(AllDishsPage), animate: true, parameters);
+            await Shell.Current.GoToAsync(nameof(AllDishsPage), animate: true);
         }
 
         [RelayCommand]

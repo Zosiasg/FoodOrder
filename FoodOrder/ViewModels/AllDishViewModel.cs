@@ -15,19 +15,14 @@ namespace FoodOrder.ViewModels
         [ObservableProperty]
         private bool _fromSearch;
 
-        [ObservableProperty]
-        private bool _searching;
-
         [RelayCommand]
         private async Task SearchDishs(string searchTerm)
         {
             Dishs.Clear();
-            Searching = true;
             foreach (var Dish in _DishService.SearchDishs(searchTerm))
             {
                 Dishs.Add(Dish);
             }
-            Searching = false;
         }
 
 
